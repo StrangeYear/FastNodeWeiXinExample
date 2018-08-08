@@ -9,8 +9,6 @@ const logger = require("koa-logger");
 const router = require("koa-router")();
 
 const WeiXin = require("./weixin/WeiXin");
-require("./weixin/text");
-require("./weixin/event");
 
 onerror(app);
 

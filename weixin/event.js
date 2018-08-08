@@ -1,8 +1,8 @@
-const WeiXin = require("./WeiXin");
+const FastWeixin = require("./FastWeixin");
 
-WeiXin.location = async ctx => {};
+FastWeixin.location = async ctx => {};
 
-WeiXin.menu("LEFT", async ctx => {
+FastWeixin.menu("LEFT", async ctx => {
   ctx.news([
     {
       title: "关于FURRYTAIL品牌，你想知道的都在这里",
@@ -24,17 +24,17 @@ WeiXin.menu("LEFT", async ctx => {
   ]);
 });
 
-WeiXin.scan("stick_仇", async ctx => {
+FastWeixin.scan("stick_仇", async ctx => {
   ctx.text("这里是扫码匹配参数：stick_仇");
 }).scan("stick_肥", async ctx => {
   ctx.text("这里是扫码匹配参数：stick_肥");
 });
 
-WeiXin.subscribe = async ctx => {
+FastWeixin.subscribe = async ctx => {
   ctx.text("欢迎关注我的公众号");
 };
 
-WeiXin.unsubscribe = async ctx => {
+FastWeixin.unsubscribe = async ctx => {
   console.log("取消关注事件");
   ctx.success();
 };

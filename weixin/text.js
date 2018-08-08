@@ -1,10 +1,10 @@
-const WeiXin = require("./WeiXin");
+const FastWeixin = require("./FastWeixin");
 
-WeiXin.text("无", async ctx => {
+FastWeixin.text("无", async ctx => {
   ctx.text("这里是无关键词");
 })
   .text("买", async ctx => {
-    WeiXin.sendTemplate({
+    FastWeixin.sendTemplate({
       touser: "oG-Wm0yxFP7lSrMASfHevIL8k5WA",
       template_id: "mOJ3pdY0Qc6kuvNPFl5x1EvwNiAzQJe779yZWnLIY6I",
       url: "https://www.baidu.com",
