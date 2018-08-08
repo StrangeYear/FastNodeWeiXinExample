@@ -1,9 +1,9 @@
 const FastWeixin = require("./FastWeixin");
 
-FastWeixin.text("无", async ctx => {
-  ctx.text("这里是无关键词");
+FastWeixin.text("*买*,猫窝,薄荷", async ctx => {
+  ctx.text("你好，购买请在淘宝搜索店铺“FURRYTAIL”");
 })
-  .text("买", async ctx => {
+  .text("肥,月半,省,亏,吃,宅,欲,滚,佛,忧,瘦,懒,药,仇", async ctx => {
     FastWeixin.sendTemplate({
       touser: "oG-Wm0yxFP7lSrMASfHevIL8k5WA",
       template_id: "mOJ3pdY0Qc6kuvNPFl5x1EvwNiAzQJe779yZWnLIY6I",
