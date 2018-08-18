@@ -8,7 +8,7 @@ const bodyparser = require("koa-bodyparser");
 const logger = require("koa-logger");
 const router = require("koa-router")();
 
-const WeiXin = require("./weixin/WeiXin");
+const WeiXin = require("./weixin");
 
 onerror(app);
 
@@ -53,7 +53,7 @@ app.use(async (ctx, next) => {
   }
 });
 
-router.all("/wx", ...WeiXin.router);
+router.all("/wx", ...WeiXin.router());
 
 // routes
 app.use(router.routes());
